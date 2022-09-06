@@ -1,0 +1,204 @@
+body header div, body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+body {
+  list-style: none;
+  text-decoration: none;
+  background-color: black; }
+  body header {
+    border-bottom: 1px solid orangered;
+    margin-bottom: 2rem; }
+    body header div h1 {
+      color: white;
+      font-size: 1.6rem;
+      font-family: Arial, Helvetica, sans-serif; }
+    body header nav {
+      margin-bottom: 1rem; }
+      body header nav ul li {
+        color: white;
+        font-size: 0.7rem;
+        font-family: "Cormorant SC", serif;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 0rem; }
+        body header nav ul li a {
+          text-decoration: none;
+          color: orangered;
+          padding: 0.5rem; }
+  body .container .p {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Cormorant SC", serif;
+    text-transform: uppercase;
+    margin: 4rem; }
+  body main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid orangered; }
+    body main div p {
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      align-items: center;
+      text-transform: uppercase;
+      font-family: "Cormorant SC", serif; }
+    body main div .imgborder {
+      border: 2px solid white;
+      width: 25rem;
+      height: auto;
+      margin: 2rem; }
+  body .mainform .p {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Cormorant SC", serif;
+    text-transform: uppercase;
+    margin: 4rem; }
+  body .mainform .color-letra {
+    color: white; }
+  body section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid orangered; }
+    body section .imgborder {
+      border: 2px solid white;
+      width: 25rem;
+      height: auto;
+      margin: 2rem; }
+    body section nav ul {
+      margin-bottom: 2rem; }
+      body section nav ul .horarios {
+        color: orangered;
+        font-size: 1rem;
+        text-align: center;
+        font-family: "Cormorant SC", serif;
+        margin: 1.5rem 0rem;
+        list-style: none;
+        text-decoration: none; }
+      body section nav ul .dias {
+        color: orangered;
+        font-size: 0.9rem;
+        text-align: center;
+        font-family: "Cormorant SC", serif;
+        list-style: none;
+        text-decoration: none; }
+  body .section .video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem; }
+  body .section .video-tablet {
+    display: none; }
+  body .section .video-compu {
+    display: none; }
+  body footer {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "contacto contacto" "redes redes"   "ubi ubi"  "direccion direccion" "dunamis dunamis";
+    justify-content: center;
+    align-items: center;
+    justify-items: center; }
+    body footer .redes {
+      grid-area: redes;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+    body footer .contacto {
+      grid-area: contacto; }
+    body footer .direccion {
+      grid-area: direccion;
+      margin-top: 7rem; }
+    body footer .ubi {
+      grid-area: ubi;
+      margin: 1rem; }
+    body footer .dunamis {
+      grid-area: dunamis; }
+    body footer h2 {
+      margin-top: 3rem;
+      color: whitesmoke;
+      font-size: 1.4rem;
+      font-family: Arial, Helvetica, sans-serif; }
+    body footer h3 {
+      color: #d7592b;
+      font-size: 1rem;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 3rem; }
+    body footer .imgfooter {
+      display: none; }
+
+@media screen and (min-width: 600px) {
+  body header h1 {
+    font-size: 2rem; }
+  body header nav ul li {
+    font-size: 0.9rem;
+    margin: 0.3rem; }
+  body main div p {
+    font-size: 0.9rem; }
+  body main div .imgborder {
+    width: 35rem;
+    height: auto;
+    margin: 2rem; }
+  body section .imgborder {
+    width: 35rem;
+    height: auto;
+    margin: 2rem; }
+  body .section .video-celu {
+    display: none; }
+  body .section .video-tablet {
+    display: flex;
+    justify-content: center; }
+  body .section .video-compu {
+    display: none; } }
+
+@media screen and (min-width: 1080px) {
+  body header {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 1rem;
+    margin-bottom: 2rem; }
+    body header h1 {
+      font-size: 2rem; }
+    body header nav {
+      margin-top: 2rem; }
+      body header nav ul li {
+        font-size: 1rem; }
+  body main div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    body main div p {
+      font-size: 1rem; }
+    body main div .imgborder {
+      width: 40rem;
+      height: auto;
+      margin: 2rem; }
+  body section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5rem;
+    padding: 1rem; }
+    body section .imgborder {
+      width: 40rem;
+      height: auto;
+      margin: 2rem; }
+  body .section .video-celu {
+    display: none; }
+  body .section .video-tablet {
+    display: none; }
+  body .section .video-compu {
+    display: flex;
+    justify-content: center; }
+  body footer h2 {
+    font-size: 1.6rem; }
+  body footer .imgfooter {
+    display: flex; } }

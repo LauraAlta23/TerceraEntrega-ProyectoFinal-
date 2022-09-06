@@ -1,0 +1,351 @@
+
+//selector
+@import "base/variables";
+@import "base/mixin";
+@import "base/extend";
+
+//operaciones en sass *2 -3
+
+
+//Nesting
+
+body{
+    list-style: none;
+    text-decoration: none;
+    background-color: black;
+    header{
+        border-bottom: $bordes;
+        margin-bottom: 2rem;
+        div{
+            @extend%propiedad;
+
+
+            h1{
+                color: white;
+                font-size: 1.6rem;
+                font-family: $tipografia1;
+            }
+        }
+        nav{
+            @extend%propiedad;
+            margin-bottom: 1rem;
+
+            ul{
+                li{
+                    color: white;
+                    font-size: 0.7rem;
+                    font-family: $tipografia2;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    margin: 0rem;
+                    a{
+                        text-decoration: none;
+                        color: orangered;
+                        padding: 0.5rem;
+                    }
+                }
+            }       
+        }
+
+    }
+    .container{
+        .p{
+            @include p;
+
+        }
+    }
+    main{
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: $bordes;
+            p{
+                text-align: center;
+                color: white;
+                font-size: 0.9rem;
+                align-items: center;
+                text-transform: uppercase;
+                font-family: $tipografia2;
+        
+            }
+            .imgborder{
+                border: 2px solid white;
+                width: 25rem;
+                height: auto;
+                margin: 2rem;
+            }
+        }
+    }
+
+    .mainform{
+        .p{
+            @include p;
+        }
+        .color-letra{
+            color: white;
+        }
+    }
+
+    section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: $bordes;
+        .imgborder{
+            border: 2px solid white;
+            width: 25rem;
+            height: auto;
+            margin: 2rem;
+        }
+        nav{
+            ul{
+                margin-bottom: 2rem;
+                .horarios{
+                    color: orangered;
+                    font-size: 1rem;
+                    text-align: center;
+                    font-family: $tipografia2;
+                    margin: 1.5rem 0rem;
+                    list-style: none;
+                    text-decoration: none;
+                }
+                .dias{
+                    color: orangered;
+                    font-size: 0.9rem;
+                    text-align: center;
+                    font-family: $tipografia2;
+                    list-style: none;
+                    text-decoration: none;
+                }
+            }
+        }
+ 
+    }
+ 
+        .section{
+
+            .video{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+            
+        }
+            .video-tablet{
+            display: none;
+        }
+        
+            .video-compu{
+            display: none;
+        }
+          
+    }
+
+    footer{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "contacto contacto"
+        "redes redes"  
+        "ubi ubi" 
+        "direccion direccion"
+        "dunamis dunamis"    ;
+        justify-content: center;
+        align-items: center;
+        justify-items:center;
+        .redes{
+            grid-area: redes;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .contacto{
+            grid-area: contacto;
+        }
+
+
+        .direccion{
+            grid-area: direccion;
+            margin-top: 7rem;
+        }
+
+        .ubi{
+            grid-area: ubi;
+            margin: 1rem;
+      
+        }
+        
+        .dunamis{
+            grid-area: dunamis;
+        }
+        h2{
+            margin-top: 3rem;
+            color: whitesmoke;
+            font-size: 1.4rem;
+            font-family: $tipografia1;
+        }
+        h3{
+            color: rgb(215, 89, 43);
+            font-size: 1rem;
+            text-align: center;
+            font-family: $tipografia1;
+            margin-bottom: 3rem;
+        }
+        .imgfooter{
+            display: none;
+        }
+    }
+  
+}
+
+@media screen and (min-width:600px){
+    body{
+        header{
+            h1{
+                font-size: 2rem;
+            }
+            nav{
+                ul{
+                    li{
+                        font-size: 0.9rem;
+                        margin: 0.3rem;
+                    }
+                }
+            }
+            }
+        main{
+            div{
+                p{
+                   font-size: 0.9rem;
+                }
+                .imgborder{
+                    width: 35rem;
+                    height: auto;
+                    margin: 2rem;
+                }
+            }
+            }
+        
+        section{
+            .imgborder{
+                width: 35rem;
+                height: auto;
+                margin: 2rem;
+            }
+            }
+
+
+
+        .section{
+
+            .video-celu{
+                display: none;
+            }
+            
+            .video-tablet{
+                display: flex;
+                justify-content: center;  
+            }
+            
+            .video-compu{
+                display: none;
+            }
+                
+        }
+    }
+
+}   
+
+
+@media screen and (min-width:1080px){
+    body{
+        header{
+            display:flex;
+            justify-content: space-around;
+            align-items: stretch;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            h1{
+                font-size: 2rem;
+            }
+            nav{
+                margin-top: 2rem;
+                ul{
+                    li{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        main{
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;        
+                p{
+                    font-size: 1rem;
+                }
+                .imgborder{
+                    width: 40rem;
+                    height: auto;
+                    margin: 2rem;
+                }
+            }
+        }
+
+        section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 5rem;
+            padding: 1rem;
+            .imgborder{
+                width: 40rem;
+                height: auto;
+                margin: 2rem;
+            }
+        }
+
+        
+        .section{
+
+            .video-celu{
+            display: none;
+        }
+        
+            .video-tablet{
+            display: none;
+        }
+    
+            .video-compu{
+            display: flex;
+            justify-content: center;  
+        }
+    
+        }
+
+        footer{
+            h2{
+                font-size: 1.6rem;
+            }
+            .imgfooter{
+                display: flex;
+            }
+        }
+
+    }
+}    
+
+
+
+
+
+
+
+
+
+
